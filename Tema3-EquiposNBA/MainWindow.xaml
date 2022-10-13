@@ -11,12 +11,6 @@
 
     <Window.Resources>
 
-        <Style TargetType="{x:Type Border}">
-            <Setter Property="Margin" Value="10px"></Setter>
-            <Setter Property="BorderBrush" Value="Black"></Setter>
-            <Setter Property="BorderThickness" Value="5"></Setter>
-            <Setter Property="CornerRadius" Value="10"></Setter>
-        </Style>
         <Style TargetType="{x:Type StackPanel}" x:Key="Panel1">
             <Setter Property="Background">
                 <Setter.Value>
@@ -37,6 +31,13 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="Margin" Value="10px"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="5"></Setter>
+            <Setter Property="CornerRadius" Value="10"></Setter>
+        </Style>
         <Style TargetType="{x:Type Image}">
             <Setter Property="Height" Value="135"></Setter>
             <Setter Property="Width" Value="185"></Setter>
@@ -48,8 +49,12 @@
             <Setter Property="FontSize" Value="25"></Setter>
             <Setter Property="TextAlignment" Value="Center"></Setter>
         </Style>
-        
-        
+        <Style TargetType="{x:Type WrapPanel}">
+            <Setter Property="Orientation" Value="Horizontal"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+        </Style>
+
     </Window.Resources>
     
     
@@ -58,7 +63,7 @@
         <Border>
             <StackPanel Style="{StaticResource Panel1}">
                 <TextBlock>Los Ángeles Lakers</TextBlock>
-                <WrapPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <WrapPanel>
                     <Image Source="./Recursos/9_lakers.png"></Image>
                     <Image Source="./Recursos/14_lakers.png"></Image>
                     <Image Source="./Recursos/23_lakers.png"></Image>
@@ -70,7 +75,7 @@
         <Border>
             <StackPanel Style="{StaticResource Panel2}">
                 <TextBlock Foreground="White">Miami Heat</TextBlock>
-                <WrapPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <WrapPanel>
                     <Image Source="./Recursos/7_heat.png"></Image>
                     <Image Source="./Recursos/14_heat.png"></Image>
                     <Image Source="./Recursos/22_heat.png"></Image>
