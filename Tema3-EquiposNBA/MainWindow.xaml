@@ -32,7 +32,7 @@
             </Setter>
         </Style>
 
-        <Style TargetType="{x:Type Border}">
+        <Style TargetType="{x:Type Border}" x:Key="BorderStackPanel">
             <Setter Property="Margin" Value="10"></Setter>
             <Setter Property="BorderBrush" Value="Black"></Setter>
             <Setter Property="BorderThickness" Value="5"></Setter>
@@ -56,11 +56,10 @@
         </Style>
 
     </Window.Resources>
-    
-    
+
     <!--Codigo XAML-->
     <StackPanel>
-        <Border>
+        <Border Style="{StaticResource BorderStackPanel}">
             <StackPanel Style="{StaticResource Panel1}">
                 <TextBlock>Los Ángeles Lakers</TextBlock>
                 <WrapPanel>
@@ -72,7 +71,7 @@
                 </WrapPanel>
             </StackPanel>
         </Border>
-        <Border>
+        <Border Style="{StaticResource BorderStackPanel}">
             <StackPanel Style="{StaticResource Panel2}">
                 <TextBlock Foreground="White">Miami Heat</TextBlock>
                 <WrapPanel>
